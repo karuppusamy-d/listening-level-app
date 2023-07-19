@@ -103,8 +103,8 @@ const NoteCard = ({ note, innerNote, parrentNote }: Props): ReactElement => {
                 <Icon kind={"edit"} />
               </button>
               <button
-                aria-label="Add Note"
-                title="Add Note"
+                aria-label="Add Sub Listening"
+                title="Add Sub Listening"
                 onClick={() => {
                   setPopupType("add");
                   setShowPopup(true);
@@ -129,12 +129,8 @@ const NoteCard = ({ note, innerNote, parrentNote }: Props): ReactElement => {
             aria-label="Level"
             title="Level"
             onClick={handleUpdate("level")}
-            className="bg-green-200 dark:bg-green-300 font-medium rounded text-xs h-5 px-4"
+            className="btn btn-green font-medium rounded text-xs h-5 py-0"
           >
-            {/* <Icon
-              className="text-green-300"
-              kind={note.level ? "completeFilled" : "complete"}
-            /> */}
             {note.level === 1 && "Internal"}
             {note.level === 2 && "Focused"}
             {note.level === 3 && "Global"}
